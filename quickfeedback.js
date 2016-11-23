@@ -18,7 +18,7 @@ function getStudentDetails()
 	var emailTag = nameTag.querySelector("small");
 	studentName = nameTag.innerText.substring(0, nameTag.innerText.length - emailTag.innerText.length);
 	studentEmail = emailTag.innerText;
-	if(request)
+	/*if(request)
 	{
 		request.abort();
 	}
@@ -31,7 +31,7 @@ function getStudentDetails()
 	{
 		console.log("Student registration failed with status : " + textStatus + " " + errorThrown + " " + jqXHR);
 	});
-	console.log("reached end");
+	console.log("reached end");*/
 }
 
 getStudentDetails();
@@ -78,6 +78,7 @@ function fillCourse(courseIndex)
 	}
 	var submitButton = questionsDiv.querySelector("button.btn");
 	console.log("Submitting feedback!");
+	submitButton.click();
 }
 
 function openCourse(i)
