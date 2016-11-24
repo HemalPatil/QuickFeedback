@@ -39,7 +39,7 @@ getStudentDetails();
 function fillCourse(courseIndex)
 {
 	console.log("course number : " + (courseIndex + 1) + " " + courseTabs[courseIndex].querySelector("td:nth-child(2)").innerHTML + " " + courseTabs[courseIndex].querySelector("td:nth-child(3)").innerHTML);
-	var questionsDiv = document.getElementById("ques_theory");
+	var questionsDiv = document.getElementById("que_theory");
 	var courseQuestions = document.getElementById("feedback_course").querySelectorAll("tr");
 	var facultyQuestions = questionsDiv.querySelectorAll("div:nth-child(5) table tr");
 	var questions = [];
@@ -76,9 +76,6 @@ function fillCourse(courseIndex)
 			angular.element(feedbackValue).triggerHandler("change");
 		}
 	}
-	var submitButton = questionsDiv.querySelector("button.btn");
-	console.log("Submitting feedback!");
-	submitButton.click();
 }
 
 function openCourse(i)
